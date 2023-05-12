@@ -70,7 +70,7 @@ export default function MovieCard({ movie }) {
                 navigate(`/movie/${movie.imdbID}`);
               }}
             >
-              View Details
+              More Details
             </Button>
           </Box>
         </CardActions>
