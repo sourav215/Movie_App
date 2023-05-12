@@ -1,5 +1,6 @@
 import { useSelector } from "react-redux";
 import MovieCard from "./MovieCard";
+
 import {
   Backdrop,
   Box,
@@ -8,9 +9,11 @@ import {
   Typography,
 } from "@mui/material";
 import CloseIcon from "@mui/icons-material/Close";
-import { useState } from "react";
 
 function Movie() {
+  /*
+   Accessing movies data, loding state from Redux store
+  */
   const { movies, isLoading, initial } = useSelector((store) => store);
 
   return (
