@@ -1,6 +1,7 @@
-import { Box, Card, CardMedia, Grid, Typography } from "@mui/material";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+
+import { Box, Card, CardMedia, Grid, Typography } from "@mui/material";
 import StarRateIcon from "@mui/icons-material/StarRate";
 import NavigateNextIcon from "@mui/icons-material/NavigateNext";
 import Backdrop from "@mui/material/Backdrop";
@@ -10,12 +11,17 @@ function MovieDetails() {
   const { id } = useParams();
   const [movie, setMovie] = useState({});
   const [open, setOpen] = useState(false);
+
   const handleClose = () => {
     setOpen(false);
   };
   const handleOpen = () => {
     setOpen(true);
   };
+
+  /*
+    Function to get Movie informations with the movie id getting from parameter
+ */
   const getMovieInformation = async () => {
     try {
       handleOpen();
@@ -45,9 +51,7 @@ function MovieDetails() {
       </Backdrop>
       <Box
         sx={{
-          // background: "#1c2833",
           background: "#566573",
-
           minHeight: "100vh",
           display: "flex",
           alignItems: "center",
@@ -56,8 +60,7 @@ function MovieDetails() {
       >
         <Grid
           container
-          sx={{
-            // background: "#566573",
+          sx={{            
             width: "90%",
             margin: "auto",
             padding: "20px",
@@ -75,18 +78,12 @@ function MovieDetails() {
             >
               <CardMedia
                 component="img"
-                alt="Movie not found"
-                // height="450"
-                // width={"100%"}
-
+                alt="Movie not found"               
                 src={movie.Poster}
               />
-            </Card>
-            {/* <Box margin="auto" marginTop={"20px"} width={"100%"}>
-            <img src={movie.Poster} style={{width: "100%"}} alt="Movie not found" />
-
-          </Box> */}
+            </Card>            
           </Grid>
+          
           <Grid item sm={12} md={8}>
             <Box
               sx={{
@@ -123,13 +120,13 @@ function MovieDetails() {
                   marginBottom: "10px",
                 }}
               >
-                <Box sx={{ marginRight: "30px", marginLeft:"5px" }}>
+                <Box sx={{ marginRight: "30px", marginLeft: "5px" }}>
                   <Typography sx={{ fontWeight: "600", fontSize: "14px" }}>
                     {movie?.Type?.toUpperCase()}
                   </Typography>
                 </Box>
                 <Box>
-                  <Typography sx={{ fontWeight: "600", marginTop:"-3px" }}>
+                  <Typography sx={{ fontWeight: "600", marginTop: "-3px" }}>
                     {movie.Runtime}
                   </Typography>
                 </Box>
