@@ -7,6 +7,7 @@ import {
   Grid,
   Typography,
 } from "@mui/material";
+import CloseIcon from "@mui/icons-material/Close";
 import { useState } from "react";
 
 function Movie() {
@@ -28,7 +29,6 @@ function Movie() {
               justifyContent: "center",
               alignItems: "center",
               height: "80vh",
-
             }}
           >
             <Box>
@@ -48,6 +48,11 @@ function Movie() {
           >
             <Box>
               <Typography variant="h4" color={"white"}>
+                <CloseIcon
+                  sx={{
+                    marginRight: "10px",
+                  }}
+                />
                 No movie found
               </Typography>
             </Box>
