@@ -6,13 +6,13 @@ Discover your favorite movies with this user-friendly web app. Easily search for
 
 ### Tech Stack
 
-Frontend - Reactjs, Material-UI
+Frontend - Reactjs, Material-UI, Redux
 <br/>
 API - OMDB api
 
 ### Deployed Link
 
-https://omdb-s-movie-app.netlify.app/
+https://omdb-s-movie-app.netlify.app
 
 ### `npm start`
 
