@@ -1,16 +1,21 @@
 import { useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { Box, Container, Grid, InputAdornment, TextField } from "@mui/material";
+import { useDispatch} from "react-redux";
 
-import SearchBar from "material-ui-search-bar";
 import appThunkActionCreator from "../../redux/Action/action";
 
+import { Box, Grid, } from "@mui/material";
+import SearchBar from "material-ui-search-bar";
+
 function Search() {
+
   const dispatch = useDispatch();
   const [title, setTitle] = useState("");
+
   const handleSearch = () => {
+
     let url = `https://www.omdbapi.com/?apikey=47082d1a&s=${title}`;
 
+    // Function to handle async operation form Redux Thunk
     dispatch(appThunkActionCreator(url));
   };
 
@@ -18,8 +23,7 @@ function Search() {
     <Box>
       <Box width={"50%"} margin={"10px auto"}>
         <SearchBar
-          placeholder="Search movie"
-          // value={this.state.value}
+          placeholder="Search movie"          
           onChange={(value) => setTitle(value)}
           onRequestSearch={handleSearch}
         />
