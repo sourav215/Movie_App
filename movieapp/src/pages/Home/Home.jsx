@@ -1,4 +1,5 @@
 import { Box, Typography } from "@mui/material";
+
 import SearchComponent from "../../components/Search/Search";
 import Movie from "../../components/Movie/Movie";
 
@@ -13,8 +14,13 @@ function Home() {
       >
         Movie App
       </Typography>
+
+      {/* Search Input component */}
       <SearchComponent />
+
+      {/* Component to display all movies related to search input */}
       <Movie />
+      
     </Box>
   );
 }
