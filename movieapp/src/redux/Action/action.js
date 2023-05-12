@@ -4,8 +4,7 @@ import {
   GET_MOVIES_DATA_FAILURE,
 } from "./actiontype";
 
-const appThunkActionCreator = (url) => {
-  // console.log(url);
+const appThunkActionCreator = (url) => { 
 
   return function appThunk(dispatch, getState) {
     dispatch({
@@ -16,7 +15,7 @@ const appThunkActionCreator = (url) => {
     fetch(url)
       .then((res) => res.json())
       .then((resData) => {
-        // console.log("resData", resData);
+        
         if (resData.Response == "True") {
           console.log("found");
           dispatch({

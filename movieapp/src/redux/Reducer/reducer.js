@@ -3,6 +3,7 @@ import {
   GET_MOVIES_DATA_SUCCESS,
   GET_MOVIES_DATA_FAILURE,
 } from "../Action/actiontype";
+
 const initialState = {
   movies:[],
   isLoading: false,
